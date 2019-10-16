@@ -1,7 +1,7 @@
 pipeline {
     agent { docker { image 'node:6.3' } }
     stages {
-        stage('Initialize'){
+        stage('Initialize') {
             def dockerHome = tool 'docker-jenkins'
             env.PATH = "${dockerHome}/bin:${env.PATH}"
         }        
